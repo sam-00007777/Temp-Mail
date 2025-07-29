@@ -1,275 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>📬Temp Mail | Joker Tools </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <style>
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
-      background: #001f4d;
-    }
+  <meta charset="UTF-8" />
+  <title>📬Temp Mail | Joker Tools </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      background: #001f4d;
+    }
 
-    html, body {
-      height: 100%;
-      background: #001f4d;
-      margin: 0;
-      padding: 0;
-      overflow-x: hidden;
-      font-family: 'Segoe UI', sans-serif;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
+    html, body {
+      height: 100%;
+      background: #001f4d;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
 
-    * {
-      box-sizing: border-box;
-    }
+    * {
+      box-sizing: border-box;
+    }
 
-    .container {
-      background: rgba(0, 31, 77, 0.75);
-      padding: 30px 20px;
-      border-radius: 15px;
-      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
-      width: 100%;
-      max-width: 500px;
-      color: white;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
+    .container {
+      background: rgba(0, 31, 77, 0.75);
+      padding: 30px 20px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+      width: 100%;
+      max-width: 500px;
+      color: white;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
 
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #e0eafc;
-    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #e0eafc;
+    }
 
-    input[type="text"] {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      border-radius: 8px;
-      border: 1px solid #5c8bd7;
-      margin: 10px 0;
-      background: #111;
-      color: white;
-      outline: none;
-      transition: border-color 0.3s, background 0.3s;
-    }
+    input[type="text"] {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #5c8bd7;
+      margin: 10px 0;
+      background: #111;
+      color: white;
+      outline: none;
+      transition: border-color 0.3s, background 0.3s;
+    }
 
-    input[type="text"]::placeholder {
-      color: #bbb;
-    }
+    input[type="text"]::placeholder {
+      color: #bbb;
+    }
 
-    input[type="text"]:focus {
-      border-color: #00bcd4;
-      background: #222;
-    }
+    input[type="text"]:focus {
+      border-color: #00bcd4;
+      background: #222;
+    }
 
-    button {
-      width: 100%;
-      padding: 12px;
-      font-size: 16px;
-      background: #00bcd4;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      margin-bottom: 10px;
-      transition: background 0.3s;
-    }
+    button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      background: #00bcd4;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-bottom: 10px;
+      transition: background 0.3s;
+    }
 
-    button:hover {
-      background: #009bad;
-    }
+    button:hover {
+      background: #009bad;
+    }
 
-    .email-box {
-      background: rgba(255, 255, 255, 0.15);
-      padding: 15px;
-      border-radius: 8px;
-      color: #e0eafc;
-      margin-top: 15px;
-      word-break: break-word;
-    }
+    .email-box {
+      background: rgba(255, 255, 255, 0.15);
+      padding: 15px;
+      border-radius: 8px;
+      color: #e0eafc;
+      margin-top: 15px;
+      word-break: break-word;
+    }
 
-    pre {
-      background: rgba(30, 30, 30, 0.8);
-      color: #d4d4d4;
-      padding: 15px;
-      margin-top: 20px;
-      border-radius: 10px;
-      font-size: 14px;
-      overflow-x: auto;
-      max-height: 300px;
-    }
+    pre {
+      background: rgba(30, 30, 30, 0.8);
+      color: #d4d4d4;
+      padding: 15px;
+      margin-top: 20px;
+      border-radius: 10px;
+      font-size: 14px;
+      overflow-x: auto;
+      max-height: 300px;
+    }
 
-    pre::-webkit-scrollbar {
-      height: 8px;
-    }
+    pre::-webkit-scrollbar {
+      height: 8px;
+    }
 
-    pre::-webkit-scrollbar-thumb {
-      background: #00bcd4;
-      border-radius: 5px;
-    }
+    pre::-webkit-scrollbar-thumb {
+      background: #00bcd4;
+      border-radius: 5px;
+    }
 
-    @media (max-width: 500px) {
-      .container {
-        margin: 20px;
-        padding: 20px;
-      }
-      button {
-        font-size: 15px;
-        padding: 10px;
-      }
-    }
-  </style>
+    @media (max-width: 500px) {
+      .container {
+        margin: 20px;
+        padding: 20px;
+      }
+      button {
+        font-size: 15px;
+        padding: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-  <!-- পার্টিকলস ব্যাকগ্রাউন্ড -->
-  <div id="particles-js"></div>
+  <!-- পার্টিকলস ব্যাকগ্রাউন্ড -->
+  <div id="particles-js"></div>
 
-  <div class="container">
-    <h2>📧 Temp Mail </h2>
+  <div class="container">
+    <h2>📧 Temp Mail </h2>
 
-    <button onclick="generateRandom()">🎲 Generate Random Email</button>
-    <input type="text" id="customName" placeholder="Enter custom name" />
-    <button onclick="generateCustom()">🧑‍💻 Generate Custom Email</button>
+    <button onclick="generateRandom()">🎲 Generate Random Email</button>
+    <input type="text" id="customName" placeholder="Enter custom name" />
+    <button onclick="generateCustom()">🧑‍💻 Generate Custom Email</button>
 
-    <div class="email-box" id="emailBox" style="display:none;">
-      <strong>Your Email:</strong> <span id="emailText"></span>
-      <br /><br />
-      <button onclick="loadInbox()">📥 Load Inbox</button>
-      <button onclick="copyEmail()">📋 Copy Email</button>
-    </div>
+    <div class="email-box" id="emailBox" style="display:none;">
+      <strong>Your Email:</strong> <span id="emailText"></span>
+      
+      <br /><br />
+<button onclick="copyEmail()">📋 Copy Email</button>
 
-    <pre id="output">Inbox messages will appear here...</pre>
-  </div>
+      <button onclick="loadInbox()">📥 Load Inbox</button>
+    </div>
 
-  <!-- particles.js CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
-  <script>
-    particlesJS('particles-js', {
-      "particles": {
-        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
-        "color": { "value": "#ffffff" },
-        "shape": { "type": "circle" },
-        "opacity": { "value": 0.5 },
-        "size": { "value": 5, "random": true },
-        "line_linked": {
-          "enable": true,
-          "distance": 150,
-          "color": "#ffffff",
-          "opacity": 0.4,
-          "width": 1
-        },
-        "move": { "enable": true, "speed": 6 }
-      },
-      "interactivity": {
-        "events": {
-          "onhover": { "enable": true, "mode": "repulse" },
-          "onclick": { "enable": true, "mode": "push" }
-        }
-      }
+    <pre id="output">Inbox messages will appear here...</pre>
+  </div>
+
+  <!-- particles.js CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+  <script>
+    particlesJS('particles-js', {
+      "particles": {
+        "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+        "color": { "value": "#ffffff" },
+        "shape": { "type": "circle" },
+        "opacity": { "value": 0.5 },
+        "size": { "value": 5, "random": true },
+        "line_linked": {
+          "enable": true,
+          "distance": 150,
+          "color": "#ffffff",
+          "opacity": 0.4,
+          "width": 1
+        },
+        "move": { "enable": true, "speed": 6 }
+      },
+      "interactivity": {
+        "events": {
+          "onhover": { "enable": true, "mode": "repulse" },
+          "onclick": { "enable": true, "mode": "push" }
+        }
+      }
+    });
+
+    // তোমার Temp Mail JS কোড
+
+    let currentEmail = localStorage.getItem("tempMail") || "";
+
+    if (currentEmail) {
+      document.getElementById("emailBox").style.display = "block";
+      document.getElementById("emailText").textContent = currentEmail;
+    }
+
+    function generateRandom() {
+      fetch("https://corsproxy.io/?https://tempmail.bjcoderx.workers.dev/gen")
+        .then(res => res.json())
+        .then(data => {
+          if (data.mail) {
+            currentEmail = data.mail;
+            localStorage.setItem("tempMail", currentEmail);
+            document.getElementById("emailBox").style.display = "block";
+            document.getElementById("emailText").textContent = currentEmail;
+            document.getElementById("output").textContent = "✅ Email generated.";
+          } else {
+            document.getElementById("output").textContent = "❌ Failed to generate email!";
+          }
+        })
+        .catch(err => {
+          document.getElementById("output").textContent = "⚠️ Error: " + err.message;
+        });
+    }
+
+    function generateCustom() {
+      const name = document.getElementById("customName").value.trim();
+      if (!name) {
+        alert("⚠️ Enter a custom name");
+        return;
+      }
+
+      fetch("https://corsproxy.io/?https://tempmail.bjcoderx.workers.dev/gen?name=" + encodeURIComponent(name))
+        .then(res => res.json())
+        .then(data => {
+          if (data.mail) {
+            currentEmail = data.mail;
+            localStorage.setItem("tempMail", currentEmail);
+            document.getElementById("emailBox").style.display = "block";
+            document.getElementById("emailText").textContent = currentEmail;
+            document.getElementById("output").textContent = "✅ Custom email generated.";
+          } else {
+            document.getElementById("output").textContent = "❌ Failed to generate custom email!";
+          }
+        })
+        .catch(err => {
+          document.getElementById("output").textContent = "⚠️ Error: " + err.message;
+        });
+    }
+
+    function loadInbox() {
+      if (!currentEmail) {
+        alert("📩 Please generate an email first.");
+        return;
+      }
+
+      const inboxUrl = "https://corsproxy.io/?https://tempmail.bjcoderx.workers.dev/inbox/" + encodeURIComponent(currentEmail);
+
+      document.getElementById("output").textContent = "🔄 Loading inbox...";
+
+      fetch(inboxUrl)
+        .then(res => res.json())
+        .then(data => {
+          if (data.status === "ok" && data.messages && data.messages.length > 0) {
+            let output = "📧 Inbox Messages:\n\n";
+            data.messages.forEach((msg, i) => {
+              output += `#${i + 1}\nSubject: ${msg.subject}\nFrom: ${msg.from}\n\n`;
+            });
+            document.getElementById("output").textContent = output.trim();
+          } else {
+            document.getElementById("output").textContent = "📭 No messages received yet.";
+          }
+        })
+        .catch(err => {
+          document.getElementById("output").textContent = "⚠️ Error loading inbox: " + err.message;
+        });
+    }
+    
+    function copyEmail() {
+  const email = document.getElementById("emailText").textContent;
+  if (!email) {
+    alert("⚠️ No email to copy.");
+    return;
+  }
+  navigator.clipboard.writeText(email)
+    .then(() => {
+      document.getElementById("output").textContent = "✅ Email copied to clipboard!";
+    })
+    .catch(err => {
+      document.getElementById("output").textContent = "❌ Failed to copy: " + err.message;
     });
+}
 
-    let currentEmail = localStorage.getItem("tempMail") || "";
-
-    if (currentEmail) {
-      document.getElementById("emailBox").style.display = "block";
-      document.getElementById("emailText").textContent = currentEmail;
-    }
-
-    function generateRandom() {
-      fetch("https://corsproxy.io/?https://tempmail.bjcoderx.workers.dev/gen")
-        .then(res => res.json())
-        .then(data => {
-          if (data.mail) {
-            currentEmail = data.mail;
-            localStorage.setItem("tempMail", currentEmail);
-            document.getElementById("emailBox").style.display = "block";
-            document.getElementById("emailText").textContent = currentEmail;
-            document.getElementById("output").textContent = "✅ Email generated.";
-          } else {
-            document.getElementById("output").textContent = "❌ Failed to generate email!";
-          }
-        })
-        .catch(err => {
-          document.getElementById("output").textContent = "⚠️ Error: " + err.message;
-        });
-    }
-
-    function generateCustom() {
-      const name = document.getElementById("customName").value.trim();
-      if (!name) {
-        alert("⚠️ Enter a custom name");
-        return;
-      }
-
-      fetch("https://corsproxy.io/?https://tempmail.bjcoderx.workers.dev/gen?name=" + encodeURIComponent(name))
-        .then(res => res.json())
-        .then(data => {
-          if (data.mail) {
-            currentEmail = data.mail;
-            localStorage.setItem("tempMail", currentEmail);
-            document.getElementById("emailBox").style.display = "block";
-            document.getElementById("emailText").textContent = currentEmail;
-            document.getElementById("output").textContent = "✅ Custom email generated.";
-          } else {
-            document.getElementById("output").textContent = "❌ Failed to generate custom email!";
-          }
-        })
-        .catch(err => {
-          document.getElementById("output").textContent = "⚠️ Error: " + err.message;
-        });
-    }
-
-    function loadInbox() {
-      if (!currentEmail) {
-        alert("📩 Please generate an email first.");
-        return;
-      }
-
-      const inboxUrl = "https://corsproxy.io/?https://tempmail.bjcoderx.workers.dev/inbox/" + encodeURIComponent(currentEmail);
-
-      document.getElementById("output").textContent = "🔄 Loading inbox...";
-
-      fetch(inboxUrl)
-        .then(res => res.json())
-        .then(data => {
-          if (data.status === "ok" && data.messages && data.messages.length > 0) {
-            let output = "📧 Inbox Messages:\n\n";
-            data.messages.forEach((msg, i) => {
-              output += `#${i + 1}\nSubject: ${msg.subject}\nFrom: ${msg.from}\n\n`;
-            });
-            document.getElementById("output").textContent = output.trim();
-          } else {
-            document.getElementById("output").textContent = "📭 No messages received yet.";
-          }
-        })
-        .catch(err => {
-          document.getElementById("output").textContent = "⚠️ Error loading inbox: " + err.message;
-        });
-    }
-
-    function copyEmail() {
-      const email = document.getElementById("emailText").textContent;
-      if (!email) {
-        alert("⚠️ No email to copy.");
-        return;
-      }
-      navigator.clipboard.writeText(email)
-        .then(() => {
-          document.getElementById("output").textContent = "✅ Email copied to clipboard!";
-        })
-        .catch(err => {
-          document.getElementById("output").textContent = "❌ Failed to copy: " + err.message;
-        });
-    }
-  </script>
+  </script>
 </body>
 </html>
